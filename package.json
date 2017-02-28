@@ -1,0 +1,23 @@
+{
+	"name": "visitors",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/edigley/visitors.git"
+	},
+	"version": "0.0.1",
+	"description": "Visitor Access Control",
+	"main": "index.js",
+	"scripts": {
+
+	},
+	"keywords": [
+		"react",
+		"redux"
+	],
+	"author": "Edigley Fraga",
+	"license": "GPL v3",
+	"dependencies": {
+	},
+	"devDependencies": {
+	}
+}
