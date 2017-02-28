@@ -1,0 +1,16 @@
+/node_modues/
+/dist/
+/coverage/
+/npm-debug.log.*
+/npm-debug.log
+/jsconfig.json
+/.idea
+/.vscode
+*.svntmp
+*.iml
+/cached_uglify
+/visitors.iml/
+/.nyc_output/
+yarn.lock
+.npmrc
+.tmp/
