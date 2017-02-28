@@ -8,7 +8,18 @@
 	"description": "Visitor Access Control",
 	"main": "index.js",
 	"scripts": {
-
+		"prepush": "npm run eslint -- --quiet && npm run test",
+		"deploy": "webpack --package --deploy",
+		"package": "webpack --package",
+		"cpd": "jscpd --path=app/ --skip-comments",
+		"eslint": "eslint app/** --fix",
+		"jsonServer": "json-server --watch api/application_db.json --port 9999 --routes api/routes.json",
+		"start": "http-server ./dist -s | webpack --watch -d --profile --progress --env=local --run",
+		"start:dev": "",
+		"start:inline": "",
+		"start:prod": "",
+		"test": "",
+		"cover": "",
 	},
 	"keywords": [
 		"react",
