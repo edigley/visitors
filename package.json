@@ -23,7 +23,9 @@
 	},
 	"keywords": [
 		"react",
-		"redux"
+		"redux",
+		"esling",
+		"babel"
 	],
 	"author": "Edigley Fraga",
 	"license": "GPL-3.0",
@@ -57,7 +59,14 @@
 		"babel-loader": "^6.2.4",
 		"babel-plugin-istanbul": "^3.0.0",
 		"babel-preset-es2015": "^6.9.0",
+		"babel-preset-latest": "^6.14.0",
+		"babel-preset-react": "^6.11.1",
+		"babel-preset-stage-0": "^6.5.0",
 		"istanbul": "^1.0.0-alpha.2",
 		"istanbul-react": "^1.1.0"
+	},
+	"nyc": {
+		"sourceMap": false,
+		"instrument": false
 	}
 }

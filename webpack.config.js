@@ -13,13 +13,19 @@ const PACKAGE = require("./package.json");
 var ENV = argv.env;
 
 const DEPLOY_FILE_NAME = `${PACKAGE.name}-${PACKAGE.version}-${ENV}.zip`;
+/*** NEXUS CONSTANTS ***/
+const DEPLOY_URI=""
+const DEPLOY_TO_NEXUS_CMD=`mvn deploy:deploy-file -DgroupId=com.edigley -DartifactId=${PACKAGE.name}=${ENV} -Dversion=${PACKAGE.version}
+-DrepositoryId=gmrepo -DgeneratePom=true -Dpackaging=zip -Durl=${DEPLOY_URI} -Dfile=dist/zip/${DEPLOY_FILE_NAME}`;
+const DEPLOY_TO_NEXUS_CMD_CURL=""
+/*** END NEXUS CONSTANTS ***/
 
 module.exports = {
 	entry: {
-		js: argv.env == "local" ? ["webpack/hot/only-dev-server", "react-hot-loader/patch", "babel-polyfill", "./app/index.js"] : [ "babel-polyfill","./app/index.js"],
-		vendor: ["react","react-dom","redux","react-redux","es6-promise","react-addons-shallow-compare","react-virtualized"]
+		js: argv.env == "local" ? ["webpack/hot/only-dev-server", "react-hot-loader/patch", "babel-polyfill", "./app/index.js"] : [ "babel-polyfill", "./app/index.js"],
+		vendor: ["react", "react-dom", "redux", "react-redux", "es6-promise", "react-addons-shallow-compare", "react-virtualized"]
 	},
-	devtool: (argv.env=="dev" || argv.env=="local") ? "source-map" : "",
+	devtool: (argv.env == "dev" || argv.env == "local") ? "source-map" : "",
 	devServer: {
 		contentBase: "dist/"
 	},
@@ -29,7 +35,7 @@ module.exports = {
 	},
 	module: {
 		preLoaders: [
-			{ test: /\.json/, loader: "json" }
+			{ test: /\.json$/, loader: "json" }
 		],
 		loaders: [
 			{
@@ -49,7 +55,8 @@ module.exports = {
 			{ test:/\.(ttf|eot|svg)(\?v=[0-9].[0-9].[0-9])?$/, loader: "file-loader?name=assets/fonts/[name].[ext]" }
 		]
 	},
-	plugins: ( function (argv) {
+	plugins: (function (argv) {
+		/* Common Plugins */
 		var plugins = [
 			new CleanWebpackPlugin((["dist"])),
 			new webpack.optimize.CommonsChunkPlugin({
@@ -62,7 +69,7 @@ module.exports = {
 				filename: "index.html",
 				inject: "body"
 			}),
-			new webpack.NormalModuleReplacementPlugin(/Autosuggest\.scss$/, "react-bootstrap-autosuggest/src/Autosuggest.scss"),
+			//new webpack.NormalModuleReplacementPlugin(/Autosuggest\.scss$/, "react-bootstrap-autosuggest/src/Autosuggest.scss"),
 			new CopyWebpackPlugin([{ from: "app/assets", to: "assets" }]),
 			new CompressionPlugin({test: /\.js$|\.css$|\html$/})
 		];
@@ -91,13 +98,39 @@ module.exports = {
 					})
 				);
 				break;
+			case "uat":
+			case "uat1":
+			case "int":
+			case "int1":
+			case "int2":
+			case "int3":
+			case "int4":
+				plugins.push(
+					new webpack.DefinePlugin({
+						'process.env': {
+							NODE_ENV: JSON.stringify("production")
+						},
+						API_URL: JSON.stringify(`http://${argv.env}edigley.com/`)
+					})
+				);
+				break;
+			case "sit":
+				plugins.push(
+					new webpack.DefinePlugin({
+						'process.env': {
+							NODE_ENV: JSON.stringify("production")
+						},						
+						API_URL: JSON.stringify('http://localhost:9999/')
+					})
+				);
+				break;				
 			case "local":
 				plugins.push(
 					new webpack.DefinePlugin({
 						API_URL: JSON.stringify('http://localhost:9999/')
 					})
 				);
-				break;
+				break;				
 			default:
 				plugins.push(
 					new webpack.DefinePlugin({
@@ -107,6 +140,7 @@ module.exports = {
 				break;
 		}
 
+		/* Enabled if --package is added as parameter */
 		if (argv.package) {
 			console.info("\x1b[36m%s\x1b[0m", ":: Packaging ::");
 			plugins.push(
@@ -124,8 +158,16 @@ module.exports = {
 					},
 				})
 			);
-			plugins.push(new ZipPlugin({ path: 'zip', filename: DEPLOY_FILE_NAME }));
+			plugins.push(new ZipPlugin({ path: 'zip', filename: DEPLOY_FILE_NAME, }));
 		}
-
+		/* Enabled if --deploy is added as parameter */
+		if (argv.package) {
+			console.info("\x1b[36m%s\x1b[0m", ":: Deploying ::");
+			plugins.push(new ShellPlugin({
+				onBuildEnd: [DEPLOY_TO_NEXUS_CMD_CURL],
+				safe: true
+			}));
+		}
+		return plugins;
 	})(argv)
 };
