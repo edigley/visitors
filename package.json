@@ -14,7 +14,7 @@
 		"cpd": "jscpd --path=app/ --skip-comments",
 		"eslint": "eslint app/** --fix",
 		"jsonServer": "json-server --watch api/application_db.json --port 9999 --routes api/routes.json",
-		"start": "http-server ./dist -s | webpack --watch -d --profile --progress --env=local --run",
+		"start": "http-server --port 8080 ./dist -s | webpack --watch -d --profile --progress --env=local --run",
 		"start:dev": "http-server ./dist -s | webpack --watch -d --profile --progress --env=dev --run",
 		"start:inline": "http-server ./dist -s | webpack-dev-server --env=dev --inline --port 8081 --run",
 		"start:prod": "http-server ./dist | webpack --env=prod --profile --run",

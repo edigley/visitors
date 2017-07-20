@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import Form from "../../components/Form/Form";
 import validate from "../../containers/Form/Validation/Validator";
 
-import { fields } from "../../utils/Form/formDefinition";
+import { fields } from "../../utils/form/formDefinition";
 
 const mapStateToProps = (state, ownProps) => {
 	return {

@@ -6,14 +6,25 @@ class Input extends React.Component {
   
     constructor(props) {
         super(props);
+        console.log("Input.constructor.props", props);
+        this.state = {value:""};
+        this.handleOnChange = this.handleOnChange.bind(this);
+    }
+
+    handleOnChange(evt) {
+        const value = evt.target.value;
+        console.log("Input.onChange.value", value);
+        this.setState({value:value});
+        this.props.input.onChange(value);
     }
 
     render() {
+        console.log("Input.render.props", this.props);
         return (
-                <div>
-                    <FormControl {...this.props.input} />
-                </div>
-            );
+            <div>
+                <FormControl value={this.state.value} onChange={this.handleOnChange} />
+            </div>
+        );
     }
 }
 

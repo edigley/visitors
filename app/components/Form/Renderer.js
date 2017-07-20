@@ -23,13 +23,17 @@ class Renderer extends React.Component {
     render() {
     	let CustomComponent=FORM_COMPONENTS[this.props.type];
         return (
-                <div>
-                    <CustomComponent {...this.props} />
-                    { this.props.meta.touched &&
-                      this.props.meta.error   &&
-                      <div style={{color: "white", backgroundColor: danger}}>{this.props.meta.error}</div> }
-                </div>
-            );
+            <div>
+                <CustomComponent {...this.props} />
+                { 
+                    this.props.meta.touched 
+                    && this.props.meta.error 
+                    && <div style={{color: "white", backgroundColor: danger}}>
+                        {this.props.meta.error}
+                        </div> 
+                }
+            </div>
+        );
     }
 }
 
