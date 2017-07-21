@@ -1,4 +1,5 @@
-import React, {PropTypes} from "react";
+import React from "react";
+import PropTypes from "prop-types";
 import {connect} from "react-redux";
 // import * as formActions from "../actions/form/form";
 import Form from "../../components/Form/Form";

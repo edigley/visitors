@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {Field} from "redux-form";
 import {FormGroup, ControlLabel} from "react-bootstrap";
 
@@ -20,8 +21,8 @@ const FormField = (field) => {
 }
 
 FormField.propTypes = {
-    label: React.PropTypes.string.isRequired,
-    name: React.PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
 };
 
 export default FormField;

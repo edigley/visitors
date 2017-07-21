@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {danger} from "../../utils/colors";
 import {Button} from "react-bootstrap";
 
@@ -36,7 +37,7 @@ class Toggle extends React.Component {
 }
 
 Toggle.propTypes = {
-    input: React.PropTypes.object.isRequired
+    input: PropTypes.object.isRequired
 };
 
 export default Toggle;

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {FormControl} from "react-bootstrap";
 import {danger} from "../../utils/colors";
 
@@ -38,7 +39,7 @@ class Renderer extends React.Component {
 }
 
 Input.propTypes = {
-    type: React.PropTypes.string.isRequired
+    type: PropTypes.string.isRequired
 };
 
 export default Renderer;

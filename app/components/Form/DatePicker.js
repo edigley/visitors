@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import {danger} from "../../utils/colors";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -27,7 +28,7 @@ class DatePicker extends React.Component {
 }
 
 DatePicker.propTypes = {
-    input: React.PropTypes.object.isRequired
+    input: PropTypes.object.isRequired
 };
 
 
