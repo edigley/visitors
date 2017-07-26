@@ -134,11 +134,14 @@ AmountOfTime.propTypes = {
     showEmptyOption: PropTypes.bool,
     unit: PropTypes.string,
     units: PropTypes.arrayOf(
-        PropTypes.shape({
-            code: PropTypes.string,
-            label: PropTypes.string
-        })
-    ).isRequired,
+        PropTypes.oneOfType([
+            PropTypes.shape({
+                code: PropTypes.string,
+                label: PropTypes.string
+            }),
+            PropTypes.string
+        ])
+    ).isRequired
 };
 
 AmountOfTime.defaultProps = {
