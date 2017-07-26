@@ -13,7 +13,7 @@ class Input extends React.Component {
             activeValue: this.props.activeValue
         };
 
-        this.state = { ...this.value };
+        this.state = { ...this.valueModel };
 
         this.renderInput = this.renderInput.bind(this);
     }
