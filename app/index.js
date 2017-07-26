@@ -4,13 +4,6 @@ import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import App from "./components/App";
 
-
-
-
-
-
-
-
 if (process.env.NODE_ENV == "production") {
 	console.warn("The application is in production mode.");
 }
