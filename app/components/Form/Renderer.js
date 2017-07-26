@@ -10,11 +10,11 @@ import Select from "./Select";
 import AmountOfTime from "./AmountOfTime";
 
 export const FORM_COMPONENTS = {
-    "text": Input,
-    "date": DatePicker,
-    "toggle": Toggle,
-    "select": Select,
-    "amountOfTime": AmountOfTime
+    "Input": Input,
+    "DatePicker": DatePicker,
+    "Toggle": Toggle,
+    "Select": Select,
+    "AmountOfTime": AmountOfTime
 };   	
 
 class Renderer extends React.Component { 
@@ -24,7 +24,7 @@ class Renderer extends React.Component {
     }
 
     render() {
-    	let CustomComponent=FORM_COMPONENTS[this.props.type];
+    	let CustomComponent=FORM_COMPONENTS[this.props.renderer];
         return (
             <div>
                 <CustomComponent {...this.props} />

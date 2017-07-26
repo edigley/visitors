@@ -3,7 +3,7 @@ export const fields = [
         "name":"identifier",
         "label":"Identifier",
         "type":"text",
-        "component":"Input",
+        "renderer":"Input",
         "specific":{},
         "validation":[
             {
@@ -24,7 +24,7 @@ export const fields = [
         "name":"email",
         "label":"E-mail",
         "type":"text",
-        "component":"Input",
+        "renderer":"Input",
         "specific":{},
         "validation":[
             {
@@ -49,7 +49,7 @@ export const fields = [
         "name":"creationDate",
         "label":"Creation date",
         "type":"date",
-        "component":"DatePicker",
+        "renderer":"DatePicker",
         "specific":{
             "format":"YYYY-MM-DD"
         },
@@ -68,7 +68,7 @@ export const fields = [
         "name":"toggleExample1",
         "label":"Toggle Example 1",
         "type":"toggle",
-        "component":"Toggle",
+        "renderer":"Toggle",
         "specific":{
             "on"  : "Ready",
             "off" : "Not Ready",
@@ -87,7 +87,7 @@ export const fields = [
         "name":"select1",
         "label":"Select Example 1",
         "type":"text",
-        "component":"Select",
+        "renderer":"Select",
         "specific":{
             "options"  : [ "BRAZIL", "FRANCE", "GERMANY", "IRELAND", "ITALY", "JAPAN", "SPAIN", "UK", "USA", "VENEZUELA" ]
         },
@@ -102,7 +102,7 @@ export const fields = [
         "name": "amountOfTime",
         "label": "Amount of Time",
         "type": "amountOfTime",
-        "component": "AmountOfTime",
+        "renderer": "AmountOfTime",
         "units": [ "DAYS", "MONTHS", "SEMESTERS", "YEARS" ],
         "specific": {},
         "validation": [
