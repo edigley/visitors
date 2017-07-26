@@ -3,6 +3,7 @@ export const fields = [
         "name":"identifier",
         "label":"Identifier",
         "type":"text",
+        "component":"Input",
         "specific":{},
         "validation":[
             {
@@ -23,6 +24,7 @@ export const fields = [
         "name":"email",
         "label":"E-mail",
         "type":"text",
+        "component":"Input",
         "specific":{},
         "validation":[
             {
@@ -47,6 +49,7 @@ export const fields = [
         "name":"creationDate",
         "label":"Creation date",
         "type":"date",
+        "component":"DatePicker",
         "specific":{
             "format":"YYYY-MM-DD"
         },
@@ -65,6 +68,7 @@ export const fields = [
         "name":"toggleExample1",
         "label":"Toggle Example 1",
         "type":"toggle",
+        "component":"Toggle",
         "specific":{
             "on"  : "Ready",
             "off" : "Not Ready",
@@ -82,11 +86,26 @@ export const fields = [
     {
         "name":"select1",
         "label":"Select Example 1",
-        "type":"select",
+        "type":"text",
+        "component":"Select",
         "specific":{
             "options"  : [ "BRAZIL", "FRANCE", "GERMANY", "IRELAND", "ITALY", "JAPAN", "SPAIN", "UK", "USA", "VENEZUELA" ]
         },
         "validation":[
+            {
+                "type":"required",
+                "value":true      
+            }        
+        ]
+    },
+    {
+        "name": "amountOfTime",
+        "label": "Amount of Time",
+        "type": "amountOfTime",
+        "component": "AmountOfTime",
+        "units": [ "DAYS", "MONTHS", "SEMESTERS", "YEARS" ],
+        "specific": {},
+        "validation": [
             {
                 "type":"required",
                 "value":true      

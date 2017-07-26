@@ -18,8 +18,8 @@
     "start:dev": "http-server ./dist -s | webpack --watch -d --profile --progress --env=dev --run",
     "start:inline": "http-server ./dist -s | webpack-dev-server --env=dev --inline --port 8081 --run",
     "start:prod": "http-server ./dist | webpack --env=prod --profile --run",
-    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register -r jsdom-global/register test/**/Input_test.js",
-    "cover": "nyc --reporter=lcov --reporter=text node_modules/mocha/bin/_mocha test/**/Input_test.js --require ./test/config/mocha-setup-local --compilers js:babel-register,css:css-null-compiler.js"
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register -r jsdom-global/register test/**/*_test.js",
+    "cover": "nyc --reporter=lcov --reporter=text node_modules/mocha/bin/_mocha test/**/*_test.js --require ./test/config/mocha-setup-local --compilers js:babel-register,css:css-null-compiler.js"
   },
   "keywords": [
     "react",

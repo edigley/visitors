@@ -12,7 +12,7 @@ const MOUNT_NODE = document.getElementById("app");
 ReactDOM.render(<AppContainer><App/></AppContainer>,MOUNT_NODE);
 
 if (module.hot) {
-	module.hor.accept("./components/App", () => {
+	module.hot.accept("./components/App", () => {
 		console.info("Hot Module for index.js");
 		const NewApp = require("./components/App").default;
 		ReactDOM.render(<AppContainer><NewApp/></AppContainer>,MOUNT_NODE);

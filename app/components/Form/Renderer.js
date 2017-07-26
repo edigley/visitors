@@ -7,12 +7,14 @@ import Input from "./Input";
 import DatePicker from "./DatePicker";
 import Toggle from "./Toggle";
 import Select from "./Select";
+import AmountOfTime from "./AmountOfTime";
 
 export const FORM_COMPONENTS = {
     "text": Input,
     "date": DatePicker,
     "toggle": Toggle,
-    "select": Select    
+    "select": Select,
+    "amountOfTime": AmountOfTime
 };   	
 
 class Renderer extends React.Component { 
