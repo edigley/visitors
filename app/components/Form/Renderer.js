@@ -8,13 +8,15 @@ import DatePicker from "./DatePicker";
 import Toggle from "./Toggle";
 import Select from "./Select";
 import AmountOfTime from "./AmountOfTime";
+import MultiLevelSelect from "./MultiLevelSelect";
 
 export const FORM_COMPONENTS = {
     "Input": Input,
     "DatePicker": DatePicker,
     "Toggle": Toggle,
     "Select": Select,
-    "AmountOfTime": AmountOfTime
+    "AmountOfTime": AmountOfTime,
+    "MultiLevelSelect": MultiLevelSelect
 };   	
 
 class Renderer extends React.Component { 
@@ -24,6 +26,9 @@ class Renderer extends React.Component {
     }
 
     render() {
+        if (this.props.renderer=="MultiLevelSelect") {
+            console.log("this.props.products", this.props.products);
+        }
     	let CustomComponent=FORM_COMPONENTS[this.props.renderer];
         return (
             <div>

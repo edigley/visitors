@@ -4,6 +4,12 @@ import ReactDOM from "react-dom";
 import { AppContainer } from "react-hot-loader";
 import App from "./components/App";
 
+//import "./assets/css/common.css";
+//import "./assets/css/visitors.css";
+
+import "ag-grid/dist/styles/ag-grid.css";
+import "ag-grid/dist/styles/theme-fresh.css";
+
 if (process.env.NODE_ENV == "production") {
 	console.warn("The application is in production mode.");
 }

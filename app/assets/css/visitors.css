@@ -1,0 +1,217 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+
+/* LAYOUT START */
+
+.full-height {
+    height: 100%;
+    position: relative;
+}
+
+#app .admin-content {
+    margin: 0px;
+    /*padding-top: 0px;*/
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+
+/* LAYOUT END */
+
+
+/* RIGHTSIDEBAR COMPONENT START */
+
+.sidebar-content {
+    z-index: 30;
+}
+
+.sidebar-content .right {
+    padding-top: 50px;
+}
+
+.sidebar-header .glyphicon {
+    padding-right: 10px;
+}
+
+
+/* RIGHTSIDEBAR COMPONENT END */
+
+
+/* HEADER START */
+
+.inline {
+    display: inline;
+}
+
+.header-fixed-top+div {
+    padding-top: 52px;
+}
+
+.admin-content .visitor-page-header-block {
+    background-color: #f0f5f8;
+    border-bottom-color: rgb(187, 194, 199);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    position: fixed;
+    padding: 0;
+    top: 40px;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-left-align {
+    margin-top: 12px;
+    text-align: left;
+}
+
+.header-right-align {
+    margin-top: 12px;
+    text-align: right;
+}
+
+
+/* HEADER END */
+
+
+/* FORM PAGE LAYOUT START */
+
+.visitor-form-sections+div {
+    padding-top: 52px;
+}
+
+.visitor-form-sections {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+}
+
+
+/* FOR IE START */
+
+.admin-content .row {
+    margin-right: 0px;
+}
+
+
+/* FOR IE END */
+
+.admin-content .form-sections {
+    height: 100%;
+    padding-top: 10px !important;
+}
+
+.admin-content .form-container {
+    height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 8px 10px !important;
+}
+
+.form-data-section {
+    margin: 0px;
+    height: 100%;
+    padding: 5px 0px 10px 0px;
+}
+
+.admin-content .form-sections .sidebar-list {
+    /*float: left;*/
+    margin: 0px;
+    padding: 10px 5px;
+}
+
+
+/* FORM PAGE LAYOUT END */
+
+
+/* FORM FIELDS START */
+
+.fieldGroup-form-element {
+    padding: 10px 0px 5px 0px;
+}
+
+.fieldGroup-form-element-labe {
+    padding: 0px 0px 5px 0px;
+}
+
+
+/* FORM FIELDS END */
+
+
+/* PARTY DETAIL START */
+
+.parties-div-label-color {
+    color: #999999;
+}
+
+.parties-div-label-left {
+    float: left;
+    text-align: left;
+    color: #999999;
+}
+
+.parties-div-value-left {
+    float: left;
+    text-align: left;
+}
+
+.parties-div-label-center {
+    text-align: center;
+    color: #999999;
+}
+
+.parties-div-value-center {
+    text-align: center;
+}
+
+.parties-div-value-left {
+    text-align: left;
+    float: left;
+}
+
+.parties-div-label-bold {
+    color: #999999;
+    font-weight: 700;
+}
+
+
+/* PARTIES DETAIL END */
+
+
+/* HEDGE - TRANSACTION START */
+
+.transaction-list .main-label,
+.transaction-list .secondary-label {
+    margin-bottom: 5px;
+}
+
+
+/* HEDGE - TRANSACTION END */
+
+/* RESTRICTION CARD START */
+
+.secondary-card {
+    background-color: #DCDCDC;
+}
+
+.action-remove {
+    float: right;
+}
+
+/* RESTRICTION CARD END */

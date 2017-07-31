@@ -1,0 +1,1554 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+/* LAYOUT START */
+
+.full-height {
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+
+.scroll-bar {
+    overflow-y: auto !important;
+}
+
+.align-right {
+    float: right;
+}
+
+#app .navbar-default {
+    background-color: #07375e;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.margin-less .form-group {
+    margin: 0;
+}
+
+/* LAYOUT END */
+
+/* 4 EYES START */
+
+.panel.changed-values {
+    background-color: #ffffb3;
+}
+
+.panel.normal-values {
+    background-color: white;
+}
+
+.four-eyes-changed-values {
+    background-color: #ffffb3 !important;
+}
+
+.four-eyes-changed-values.btn-group {
+    background-color: rgba(255,255,0,0.8) !important;
+    cursor: not-allowed;
+}
+
+.four-eyes-changed-values .btn-primary {
+    background-color: #ffff92 linear-gradient(180deg,#ffffd2 0%, #efefb1 50%, #eaeaa6 50% #d8d696 100%) !important;
+    color: #000000;
+    border-color: #93979b
+}
+
+.four-eyes-changed-values .btn[disabled] {
+    opacity: 0.7;
+}
+
+.removed-element {
+    text-decoration: line-through;
+}
+
+/* 4 EYES END */
+
+/* MULTI LEVEL SELECT START */
+
+.multi-level-select-action-selection {
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+/* MULTI LEVEL SELECT END */
+
+/* MULTI CHECKBOX START */
+
+.multi-checkbox-div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 3px;
+}
+
+.multi-checkbox-div .four-eyes-changed-values {
+    border-radius: 3px;
+}
+
+.checkbox {
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+    margin: 0px;
+}
+
+/* MULTI CHECKBOX END */
+
+/* MULTI RADIO BUTTON START*/
+
+.multiCheck-div-border {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 3px;
+}
+
+.multiCheck-checkbox-div-content {
+    margin: 4px 0 0;
+}
+
+/* MULTI RADIO BUTTON END */
+
+/* PANEL HEADER START */
+
+.panel-group .panel .panel-heading {
+    background-image: -webkit-linear-gradient(#eeeeee 0%, #dddddd 100%);
+    background-image: -o-linear-gradient(#eeeeee 0%, #dddddd 100%);
+    background-image: linear-gradient(#eeeeee 0%, #dddddd 100%);
+}
+
+/* PANEL HEADER COMPONENT END */
+
+.scrollabel-tab {
+    height: 75vh;
+    -ms-overflow-x: hidden;
+    -ms-overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.width-90-centered {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.link-button {
+    background: node !important;
+    border: none;
+    padding: 0 !important;
+    font: inherit;
+    cursor: pointer;
+}
+
+.right-button {
+    margin-left: 5px;
+}
+
+.subtitle-modal,
+.text-grey {
+    color: #999999
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* HEADER */
+
+.margin-top-header {
+    margin-top: 10px;
+}
+
+.icon-color-grey {
+    color: grey;
+}
+
+.font-title-header {
+    font-weight: 700;
+}
+
+.font-title-header .fieldGroup-form-element {
+    display: inline-block;
+}
+
+.font-family-arial {
+    font-family: Arial;
+}
+
+.header-fields {
+    margin: 0 auto;
+    width: 440 px;
+}
+
+.header-fields>div {
+    float: left;
+    padding: 0 10px;
+}
+
+.header-fields div.vdivide {
+    border-right: solid 1px grey;
+}
+
+.header-fields p {
+    color: grey;
+    cursor: pointer;
+    display: table-cell;
+    height: 30px;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    width: 120px;
+}
+
+.top-toolbar h1.header {
+    font-weight: 800;
+    font-size: 34px;
+}
+
+#app .admin-content {
+    margin-top: 30px;
+    padding: 40px 10px 0 0;
+}
+
+.admin-content .deal-sections {
+    position: fixed;
+    height: 200%;
+    top: 120px;
+    z-index: 2;
+    background-color: #d1dae1;
+    width: 200px;
+}
+
+.deal-table-component {
+    position: relative;
+    padding-left: 200px;
+}
+
+.admin-content .deal-sections .switch-view {
+    background: none;
+    border: none;
+    color: rgba(29, 29, 29, 0.65);
+    cursor: pointer;
+    float: left;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.admin-content .deal-sections .switch-view small,
+.admin-content .deal-sections .switch-view span {
+    display: inline-block;
+    font-size: 12px;
+    line-height: normal;
+    padding-top: 8px;
+    vertical-align: middle;
+}
+
+.admin-content .deal-sections .switch-view span {
+    font-size: 20px;
+    margin-left: 10px;
+    padding-top: 0px;
+}
+
+.admin-content .deal-sections .sidebar-list {
+    float: left;
+    margin: 0px;
+    padding: 8px 10px;
+    width: 100%;
+}
+
+.deal-content {
+    box-sizing: border-box;
+    min-height: 100%;
+    top: 0;
+    width: 100%;
+}
+
+.datagrid {
+    width: 100%;
+}
+
+/* -------- AGGRIDREACT -------- */
+
+.flex-container>div:first-child {
+    height: 100%;
+    left: 0px;
+    padding-left: 200px;
+    position: absolute;
+}
+
+.ag-cell,
+.ag-header-cell {
+    border-right: 1px solid #d1d9de;
+    outline: none;
+    padding: 5px 10px;
+    white-space: initial;
+}
+
+.ag-cell small {
+    float: left;
+    font-style: italic;
+    margin-top: 6px;
+}
+
+.ag-cell .text-center {
+    float: left;
+    width: 100%;
+}
+
+.ag-header-container .ag-header-row .ag-header-cell,
+.ag-pinned-left-header .ag-header-row .ag-header-cell {
+    border-bottom: 1px solid #d1d9de;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 11px 10px 0px;
+    text-align: left;
+}
+
+.ag-header-container .ag-header-row .ag-header-cell .glyphicon,
+.ag-pinned-left-header .ag-header-row .ag-header-cell .glyphicon{
+    cursor: pointer;
+    float: right;
+}
+
+.ag-pinned-left-header .ag-header-row .ag-header-cell:first-child .glyphicon,
+.ag-pinned-left-header #pin,
+.ag-header-container #unpin {
+    display: none;
+}
+
+.main-deal {
+    background: #e4e9ed !important;
+}
+
+.rag-title {
+    border-bottom: 1px solid #d1d9d3;
+}
+
+.rag-element {
+    float: left;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 0px 0px 0px;
+    text-align: right;
+    width: 100%;
+}
+
+.rag-title .rag-element {
+    font-size: 14px;
+    padding-top: 32px;
+}
+
+.ag-fresh .ag-cell,
+.ag-fresh .ag-cell-focus {
+    border: none;
+}
+
+.add-column {
+    position: fixed;
+    right: 20px;
+    top: 55px;
+    z-index: 9999;
+}
+
+.radio-group,
+.radio-group .radio {
+    float: left;
+    width: 100%;
+}
+
+.radio-group .radio {
+    margin: 5px 0px 15px;
+}
+
+.radio-group .radio label {
+    float: left;
+    position: relative;
+    width: 100%;
+}
+
+.radio-group .radio .text {
+    float: left;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+.radio-group .radio input[type=radio] {
+    left: 0;
+    margin-left: 0px;
+    margin-top: -7px;
+    top: 50%;
+}
+
+.radio-group .radio input[type=text] {
+    display: inherit;
+    float: left;
+    margin-right: 3px;
+    width: 60px;
+}
+
+.radio-group .input-group {
+    display: inherit;
+}
+
+.radio-group .radio .input-group input {
+    width: 120px;
+}
+
+.radio-group .input-group .input-group-addon {
+    float: left;
+    margin-left: -3px;
+    width: 35px;
+}
+
+.radio .rw-widget {
+    float: left;
+}
+
+.ag-cell .readOnly {
+    margin-top: 5px;
+}
+
+.ag-cell hr {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.ag-cell p {
+    margin-top: 10px;
+}
+
+.ag-fresh .ag-header-cell .header-cell {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.sidebar-content .ag-cell .checkbox {
+    margin: 0px 0px 0px 15px;
+}
+
+/* TABLE PAGINATION */
+
+.pagination {
+    width: 100%;
+    border: 1px solid #d3d3d3;
+    padding: 4px 2px 3px;
+    max-height: 45px;
+}
+
+.pagination .pagination-col {
+    padding-left: 3px;
+}
+
+.pagination .size-col,
+page-summary-col {
+    min-height: 50px;
+    padding-left: 3px;
+}
+
+.pagination .size-col,
+.page-summary-col .size {
+    margin: 1px 0px;
+}
+
+.pagination .size-col,
+.page-summary-col .summary {
+    padding: 5px 2px;
+    margin: 1px 0px;
+    color: #1d769f
+}
+
+
+/* PRODUCT COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RIGHTSIDEBAR COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PANEL LIST COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AMOUNTTEXT COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AMORTISATIONDATE COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COUNTERPARTYITEM COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOOKING COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* COLLATERAL COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INVESTORITEMCOMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------- ADDPRODUCTCOMPONENT -------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Deal Tab menu */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab-content {
+    margin-top: 50px;
+}
+
+.admin-content .page-header-block {
+    background-color: #f0f5f8;
+    border: 0;
+    position: fixed;
+    height: 52px;
+    padding: 0;
+    margin: 0;
+    top: 40px;
+    width: 100%;
+    z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* LOGGED */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEDGE - TRANSACTION */
+
+.transaction-detail .control-label {
+    width: 100%;
+}
+
+.transaction-hedge input[type="radio"] {
+    margin: 0px;
+    position: absolute;
+}
+
+.transaction-hedge .transaction {
+    margin-left: 20px;
+}
